@@ -4,3 +4,9 @@ E:\jumper\EventBus\EventBusLibrary\EventBusLibrary\bin\Debug\EventBusLibrary.dll
 E:\jumper\EventBus\EventBusLibrary\EventBusLibrary\bin\Debug\EventBusLibrary.pdb
 E:\jumper\EventBus\EventBusLibrary\EventBusLibrary\obj\Debug\EventBusLibrary.dll
 E:\jumper\EventBus\EventBusLibrary\EventBusLibrary\obj\Debug\EventBusLibrary.pdb
+G:\jumper\Eventbus\EventBusLibrary\EventBusLibrary\bin\Debug\EventBusLibrary.dll
+G:\jumper\Eventbus\EventBusLibrary\EventBusLibrary\bin\Debug\EventBusLibrary.pdb
+G:\jumper\Eventbus\EventBusLibrary\EventBusLibrary\obj\Debug\EventBusLibrary.csprojAssemblyReference.cache
+G:\jumper\Eventbus\EventBusLibrary\EventBusLibrary\obj\Debug\EventBusLibrary.csproj.CoreCompileInputs.cache
+G:\jumper\Eventbus\EventBusLibrary\EventBusLibrary\obj\Debug\EventBusLibrary.dll
+G:\jumper\Eventbus\EventBusLibrary\EventBusLibrary\obj\Debug\EventBusLibrary.pdb

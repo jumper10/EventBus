@@ -11,3 +11,16 @@ E:\jumper\EventBus\EventBusLibrary\TestEventApp\bin\Debug\EventBusLibrary.pdb
 E:\jumper\EventBus\EventBusLibrary\TestEventApp\obj\Debug\TestEventApp.csproj.CopyComplete
 E:\jumper\EventBus\EventBusLibrary\TestEventApp\obj\Debug\TestEventApp.exe
 E:\jumper\EventBus\EventBusLibrary\TestEventApp\obj\Debug\TestEventApp.pdb
+G:\jumper\Eventbus\EventBusLibrary\TestEventApp\bin\Debug\TestEventApp.exe.config
+G:\jumper\Eventbus\EventBusLibrary\TestEventApp\bin\Debug\TestEventApp.exe
+G:\jumper\Eventbus\EventBusLibrary\TestEventApp\bin\Debug\TestEventApp.pdb
+G:\jumper\Eventbus\EventBusLibrary\TestEventApp\bin\Debug\EventBusLibrary.dll
+G:\jumper\Eventbus\EventBusLibrary\TestEventApp\bin\Debug\EventBusLibrary.pdb
+G:\jumper\Eventbus\EventBusLibrary\TestEventApp\obj\Debug\TestEventApp.csprojAssemblyReference.cache
+G:\jumper\Eventbus\EventBusLibrary\TestEventApp\obj\Debug\TestEventApp.Form1.resources
+G:\jumper\Eventbus\EventBusLibrary\TestEventApp\obj\Debug\TestEventApp.Properties.Resources.resources
+G:\jumper\Eventbus\EventBusLibrary\TestEventApp\obj\Debug\TestEventApp.csproj.GenerateResource.cache
+G:\jumper\Eventbus\EventBusLibrary\TestEventApp\obj\Debug\TestEventApp.csproj.CoreCompileInputs.cache
+G:\jumper\Eventbus\EventBusLibrary\TestEventApp\obj\Debug\TestEventApp.csproj.CopyComplete
+G:\jumper\Eventbus\EventBusLibrary\TestEventApp\obj\Debug\TestEventApp.exe
+G:\jumper\Eventbus\EventBusLibrary\TestEventApp\obj\Debug\TestEventApp.pdb

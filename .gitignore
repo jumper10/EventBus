@@ -1,0 +1,5 @@
+EventBusLibrary/.vs/
+obj
+bin
+*.suo
+*.user
