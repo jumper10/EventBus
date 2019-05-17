@@ -1,0 +1,13 @@
+E:\jumper\EventBus\EventBusLibrary\TestEventApp\obj\Debug\TestEventApp.csprojAssemblyReference.cache
+E:\jumper\EventBus\EventBusLibrary\TestEventApp\obj\Debug\TestEventApp.Form1.resources
+E:\jumper\EventBus\EventBusLibrary\TestEventApp\obj\Debug\TestEventApp.Properties.Resources.resources
+E:\jumper\EventBus\EventBusLibrary\TestEventApp\obj\Debug\TestEventApp.csproj.GenerateResource.cache
+E:\jumper\EventBus\EventBusLibrary\TestEventApp\obj\Debug\TestEventApp.csproj.CoreCompileInputs.cache
+E:\jumper\EventBus\EventBusLibrary\TestEventApp\bin\Debug\TestEventApp.exe.config
+E:\jumper\EventBus\EventBusLibrary\TestEventApp\bin\Debug\TestEventApp.exe
+E:\jumper\EventBus\EventBusLibrary\TestEventApp\bin\Debug\TestEventApp.pdb
+E:\jumper\EventBus\EventBusLibrary\TestEventApp\bin\Debug\EventBusLibrary.dll
+E:\jumper\EventBus\EventBusLibrary\TestEventApp\bin\Debug\EventBusLibrary.pdb
+E:\jumper\EventBus\EventBusLibrary\TestEventApp\obj\Debug\TestEventApp.csproj.CopyComplete
+E:\jumper\EventBus\EventBusLibrary\TestEventApp\obj\Debug\TestEventApp.exe
+E:\jumper\EventBus\EventBusLibrary\TestEventApp\obj\Debug\TestEventApp.pdb
