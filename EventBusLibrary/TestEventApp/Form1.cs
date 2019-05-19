@@ -19,7 +19,7 @@ namespace TestEventApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            EventBusLibrary.EventBus.Default.Subscribe<string>(Update);
+            EventBusLibrary.EventBus.Default.Subscribe<string>(Update,textBox1.Text);
 
         }
 
@@ -30,13 +30,13 @@ namespace TestEventApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            EventBusLibrary.EventBus.Default.Unsubcribe<string>(Update);
+            EventBusLibrary.EventBus.Default.Unsubcribe<string>(Update,textBox1.Text);
 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            EventBusLibrary.EventBus.Default.Publish(this.tbSender.Text);
+            EventBusLibrary.EventBus.Default.Publish($"message:{this.tbSender.Text} topic:{textBox1.Text}",textBox1.Text);
         }
        
     }

@@ -17,46 +17,69 @@ namespace EventBusLibrary
             }
         }
         private ConcurrentDictionary<Type, object> eventMap = new ConcurrentDictionary<Type, object>();
+        private ConcurrentDictionary<string, object> eventTopicMap = new ConcurrentDictionary<string, object>();
 
-        public void Publish<T>(T eventArg)
+        public void Publish<T>(T eventArg, string topic = null)
         {
-            object handler;
-            if (eventMap.TryGetValue(typeof(T), out handler))
-            {
-                ((Action<T>)handler)?.Invoke(eventArg);
-            }
+            GetHandlers<T>(topic, string.IsNullOrEmpty(topic) ? EventBusType.ArgType : EventBusType.Topic)
+                  ?.Invoke(eventArg);
         }
 
-        public void Subscribe<T>(Action<T> eventHandler)
+        public void Subscribe<T>(Action<T> eventHandler, string topic = null)
         {
-            if (eventMap.ContainsKey(typeof(T)))
-            {
-                ModfyHandler(eventHandler);
-            }
-            else
-            {
-                eventMap[typeof(T)] = null;
-                ModfyHandler(eventHandler);
-            }
+            ModfyHandler(eventHandler, topic, string.IsNullOrEmpty(topic) ? EventBusType.ArgType : EventBusType.Topic);
         }
 
-        public void Unsubcribe<T>(Action<T> eventHandler)
+        public void Unsubcribe<T>(Action<T> eventHandler, string topic = null)
         {
-
-            if (eventMap.ContainsKey(typeof(T)))
-            {
-                ModfyHandler(eventHandler, false);
-            }
+            ModfyHandler(eventHandler, topic, string.IsNullOrEmpty(topic) ? EventBusType.ArgType : EventBusType.Topic, false);
         }
 
-        private void ModfyHandler<T>(Action<T> eventHandler, bool isAdd = true)
+        private void ModfyHandler<T>(Action<T> eventHandler, string topic = null, EventBusType eventBusType = EventBusType.ArgType, bool isAdd = true)
         {
-            Action<T> handlers = (Action<T>)eventMap[typeof(T)];
+            Action<T> handlers = GetHandlers<T>(topic, eventBusType);
             if (isAdd)
                 handlers += eventHandler;
             else
                 handlers -= eventHandler;
-            eventMap[typeof(T)] = handlers;
+            SetHandlers<T>(handlers, topic, eventBusType);
+        }
+
+        private Action<T> GetHandlers<T>(string topic = null, EventBusType eventBusType = EventBusType.ArgType)
+        {
+            if (eventBusType == EventBusType.ArgType)
+            {
+                if (!eventMap.ContainsKey(typeof(T)))
+                {
+                    eventMap[typeof(T)] = null;
+                }
+                return (Action<T>)eventMap[typeof(T)];
+            }
+            else
+            {
+                if (!eventTopicMap.ContainsKey(topic))
+                {
+                    eventTopicMap[topic] = null;
+                }
+                return (Action<T>)eventTopicMap[topic];
+            }
+        }
+
+        private void SetHandlers<T>(Action<T> handlers, string topic = null, EventBusType eventBusType = EventBusType.ArgType)
+        {
+            if (eventBusType == EventBusType.ArgType)
+            {
+                eventMap[typeof(T)] = handlers;
+            }
+            else if (eventBusType == EventBusType.Topic)
+            {
+                eventTopicMap[topic] = handlers;
+            }
+        }
+        internal enum EventBusType
+        {
+            ArgType,
+            Topic
         }
     }
 }
