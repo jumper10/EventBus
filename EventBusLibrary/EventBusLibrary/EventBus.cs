@@ -31,12 +31,12 @@ namespace EventBusLibrary
         {
             if (eventMap.ContainsKey(typeof(T)))
             {
-                AddHandler(eventHandler);
+                ModfyHandler(eventHandler);
             }
             else
             {
                 eventMap[typeof(T)] = null;
-                AddHandler(eventHandler);
+                ModfyHandler(eventHandler);
             }
         }
 
@@ -45,21 +45,17 @@ namespace EventBusLibrary
 
             if (eventMap.ContainsKey(typeof(T)))
             {
-                RemoveHandler(eventHandler);
+                ModfyHandler(eventHandler, false);
             }
         }
 
-        private void AddHandler<T>(Action<T> eventHandler)
-        {
-            var handlers = (Action<T>)eventMap[typeof(T)];
-            handlers += eventHandler;
-            eventMap[typeof(T)] = handlers;
-        }
-
-        private void RemoveHandler<T>(Action<T> eventHandler)
+        private void ModfyHandler<T>(Action<T> eventHandler, bool isAdd = true)
         {
             Action<T> handlers = (Action<T>)eventMap[typeof(T)];
-            handlers -= eventHandler;
+            if (isAdd)
+                handlers += eventHandler;
+            else
+                handlers -= eventHandler;
             eventMap[typeof(T)] = handlers;
         }
     }
